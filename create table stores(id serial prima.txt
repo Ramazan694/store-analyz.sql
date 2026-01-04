@@ -1,0 +1,27 @@
+create table stores(id serial primary key,store_name varchar(30),
+category varchar(20));
+select *from stores;
+create table cards(id serial primary key,kart_nomresi varchar(30),
+tip varchar(20));
+select*from cards;
+create table transactions(id serial primary key,card_id integer references cards(id),
+store_id integer references stores(id),
+amount decimal(10,2),
+transaction_date timestamp default current_timestamp);
+select*from transactions;
+insert into stores(store_name,category) values ('Bravo','Market'),('McDonalds','Restoran'),
+('Zəfəran','Aptek'),('Bizim Market','Market');
+select*from stores;
+insert into cards(kart_nomresi,tip) values('4169XXXXXXXX1111', 'Visa'),
+('5167XXXXXXXX2222', 'Mastercard');
+select*from cards;
+insert into transactions(card_id,store_id,amount) values(1,1,45.50),(1, 2, 12.00),
+(2, 3, 25.40), 
+(2, 4, 100.00);
+select*from transactions;
+SELECT 
+    stores.category, 
+    SUM(transactions.amount)
+FROM transactions 
+JOIN stores ON transactions.store_id = stores.id
+GROUP BY stores.category;
