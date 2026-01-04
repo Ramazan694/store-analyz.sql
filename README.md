@@ -18,3 +18,6 @@ SELECT
 FROM transactions 
 JOIN stores ON transactions.store_id = stores.id
 GROUP BY stores.category;
+🛠️ İstifadə Olunan Alətlər
+PostgreSQL (Verilənlər bazası)
+DBeaver (SQL Client)
