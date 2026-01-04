@@ -7,6 +7,10 @@ Layihədə 3 əsas cədvəl arasında **Relational (Əlaqəli)** struktur qurulm
 - **Cards:** Müştəri kart məlumatları.
 - **Stores:** Mağaza adları və kateqoriyaları.
 - **Transactions:** Kartlar və mağazalar arasındakı əlaqəni (Foreign Key) saxlayan mərkəzi cədvəl.
+- 🛠️ İstifadə Olunan Alətlər
+PostgreSQL (Verilənlər bazası)
+DBeaver (SQL Client)
+
 
 ## 📊 Analitik Hesabat
 Aşağıdakı SQL sorğusu vasitəsilə kateqoriya üzrə cəmi xərclər hesablanmışdır:
@@ -18,6 +22,3 @@ SELECT
 FROM transactions 
 JOIN stores ON transactions.store_id = stores.id
 GROUP BY stores.category;
-🛠️ İstifadə Olunan Alətlər
-PostgreSQL (Verilənlər bazası)
-DBeaver (SQL Client)
