@@ -7,6 +7,10 @@ Layihədə 3 əsas cədvəl arasında **Relational (Əlaqəli)** struktur qurulm
 - **Cards:** Müştəri kart məlumatları.
 - **Stores:** Mağaza adları və kateqoriyaları.
 - **Transactions:** Kartlar və mağazalar arasındakı əlaqəni (Foreign Key) saxlayan mərkəzi cədvəl.
+
+
+
+
 - 🛠️ İstifadə Olunan Alətlər
 PostgreSQL (Verilənlər bazası)
 DBeaver (SQL Client)
